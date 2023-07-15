@@ -6,34 +6,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-image: url('background.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: Arial, sans-serif;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 40px;
-            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0 20px;
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         h1 {
-            font-size: 36px;
-            font-weight: bold;
+            font-size: 48px;
+            font-weight: 600;
             margin-bottom: 20px;
         }
 
         p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div class="container">
@@ -45,4 +56,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
