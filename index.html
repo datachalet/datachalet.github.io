@@ -57,9 +57,16 @@
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
   <main>
     <div id="video-background">
-      <video autoplay loop muted>
+      <video id="myVideo" loop muted>
         <source src="backgroundvideo.mp4" type="video/mp4">
       </video>
+      
+      <script>
+        var video = document.getElementById("myVideo");
+        video.addEventListener("canplaythrough", function() {
+          video.play();
+        });
+      </script>      
     </div>
     <section class="main">
       <div class="content">
