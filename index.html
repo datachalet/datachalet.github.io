@@ -14,12 +14,16 @@
     Favicons
     =============================================
     -->
-  <link rel="icon" type="image/png" href="assets/images/icons8-switzerland-48.png">
 
 
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <!--  
     Stylesheets
     =============================================
+    
     -->
   <!-- Default stylesheets-->
   <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,9 +32,8 @@
   <!-- Main stylesheet and color file-->
   <link href="assets/css/style.css" rel="stylesheet">
   <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-
   <style>
-    #youtube-video {
+    #video-background {
       position: fixed;
       top: 0;
       left: 0;
@@ -39,13 +42,24 @@
       z-index: -1;
       overflow: hidden;
     }
+
+    #video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
   <main>
-    <div id="youtube-video">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZgL46LXlrlM?autoplay=1&loop=1&playlist=ZgL46LXlrlM&controls=0&showinfo=0&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="video-background">
+      <video autoplay loop muted>
+        <source src="backgroundvideo.mp4" type="video/mp4">
+      </video>
     </div>
     <section class="main">
       <div class="content">
@@ -65,7 +79,6 @@
       </div>
     </section>
   </main>
-
   <!--  
     JavaScripts
     =============================================
@@ -75,6 +88,9 @@
   <script src="assets/lib/owl.carousel/dist/owl.carousel.js"></script>
   <script src="assets/lib/ajaxchimp/jquery.ajaxchimp.js"></script>
   <script src="assets/js/main.js"></script>
+</body>
+
+</html>
 </body>
 
 </html>
